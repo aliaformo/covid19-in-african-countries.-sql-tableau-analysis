@@ -4,7 +4,9 @@ This project examines perceptions, insights and finding out the main features of
 
 ## Datasets
 
-- [“African Covid cases”](https://www.kaggle.com/datasets/johnfisayo/african-covid-cases) - [“Coronavirus (COVID-19) Vaccination in Africa”](https://www.kaggle.com/datasets/malcolm95/covid19-vaccination-in-africa)
+- [“African Covid cases”](https://www.kaggle.com/datasets/johnfisayo/african-covid-cases)
+- [“Coronavirus (COVID-19) Vaccination in Africa”](https://www.kaggle.com/datasets/malcolm95/covid19-vaccination-in-africa)
+
 *Both were released in 2021*
 
 ## Questions
