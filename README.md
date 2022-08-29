@@ -11,12 +11,12 @@ This project examines perceptions, insights and finding out the main features of
 
 ## Questions
 
-Which countries had the worst situation at that time?
-Do more people get infected in countries with larger populations?
-Do the countries with more cases have more deaths?
-Do the countries where more tests are conducted show more cases?
-Do countries located in nearby areas have a similar number of cases?* In order to answer this question, most of the visualizations include Tableau maps.
-Does vaccination influence a decrease or health improvement?
+- Which countries had the worst situation at that time?
+- Do more people get infected in countries with larger populations?
+- Do the countries with more cases have more deaths?
+- Do the countries where more tests are conducted show more cases?
+- Do countries located in nearby areas have a similar number of cases?* In order to answer this question, most of the visualizations include Tableau maps.
+- Does vaccination influence a decrease or health improvement?
 
 ## Tools
 
@@ -58,6 +58,6 @@ Does vaccination influence a decrease or health improvement?
 
 7. Further analysis on ratios
 
-The parameters for comparison with World average were taken from this link [Covid19 in Africa and Clustering](https://www.kaggle.com/code/sasakitetsuya/covid19-in-africa-eda-and-clustering), dataset released in 2021 too.
+The parameters for comparison with World average were taken from this article [Covid19 in Africa and Clustering](https://www.kaggle.com/code/sasakitetsuya/covid19-in-africa-eda-and-clustering), dataset released in 2021 too. This is a secondary source. The primary source is informed in the above mentioned analysis
 
 ![Further analysis on ratios](tableau_dashboards/7_further_ratios.png)
