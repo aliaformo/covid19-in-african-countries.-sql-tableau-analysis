@@ -34,15 +34,6 @@ FROM vaccination_africa;
 
 
 
--- Top 10 most populated countries 
-
-SELECT covid_africa.Country, covid_africa.population 
-FROM covid_africa 
-ORDER by covid_africa.Population 
-DESC LIMIT 10;
-
-
-
 -- Finding main ratios
 
 SELECT 
@@ -56,9 +47,22 @@ FROM covid_africa;
 
 
 
+-- Top 10 most populous countries 
+
+SELECT 
+covid_africa.Country, 
+covid_africa.population 
+FROM covid_africa 
+ORDER by covid_africa.Population 
+DESC LIMIT 10;
+
+
+
 -- Finding Top 10 countries with the most Covid-19 cases in Africa
 
-SELECT covid_africa.Country, total_cases 
+SELECT 
+covid_africa.Country, 
+total_cases 
 FROM covid_africa 
 ORDER by total_cases 
 DESC LIMIT 10;
@@ -67,37 +71,52 @@ DESC LIMIT 10;
 
 -- Finding Top 10 countries with the most covid 19 deaths in Africa
 
-SELECT covid_africa.Country, covid_africa.Total_Deaths 
+SELECT 
+covid_africa.Country, 
+covid_africa.Total_Deaths 
 FROM covid_africa 
-ORDER by total_deaths 
-DESC LIMIT 10;
+ORDER BY total_deaths DESC 
+LIMIT 10;
 
+
+--Finding Top 10  countries with the highest number of total tests 
+
+SELECT 
+covid_africa.Country,
+covid_africa.Total_Tests 
+FROM covid_africa 
+ORDER BY total_tests DESC 
+LIMIT 10;
 
 
 -- Finding Top 10 countries with the most covid 19 recovered cases in africa
 
-SELECT covid_africa.Country, covid_africa.Total_Recovered 
+SELECT 
+covid_africa.Country, 
+covid_africa.Total_Recovered 
 FROM covid_africa 
-ORDER by total_recovered 
-DESC LIMIT 10;
+ORDER by total_recovered DESC 
+LIMIT 10;
 
+-- Finding Top 10 countries with the most covid 19 active cases in africa
 
-
--- Finding Top 10  countries with the most number of total tests 
-
-SELECT covid_africa.Country, covid_africa.Total_Tests 
+SELECT 
+covid_africa.Country, 
+covid_africa.active_cases 
 FROM covid_africa 
-ORDER by total_tests 
-DESC LIMIT 10;
+ORDER by covid_africa.active_cases DESC 
+LIMIT 10;
 
 
 
 -- Finding Top 10 countries with the most doses administered
 
-SELECT vaccination_africa.Country, vaccination_africa.doses_administered 
+SELECT 
+vaccination_africa.Country, 
+vaccination_africa.doses_administered 
 FROM vaccination_africa 
-ORDER by doses_administered 
-DESC LIMIT 10;
+ORDER BY doses_administered DESC 
+LIMIT 10;
 
 
 
@@ -115,22 +134,8 @@ SELECT
 group_of_doses, 
 COUNT(group_of_doses) as Frequency
 FROM vaccination_africa
-GROUP by group_of_doses
-ORDER by Frequency DESC;
-
-
-
--- Finding vaccination situation of top 10 countries with the most active cases
-
-SELECT 
-covid_africa.country,
-covid_africa.active_cases,
-vaccination_africa.Group_of_Doses
-FROM covid_africa
-JOIN vaccination_africa 
-ON covid_africa.country = vaccination_africa.country
-order by covid_africa.active_cases DESC
-LIMIT 10;
+GROUP BY group_of_doses
+ORDER BY Frequency DESC;
 
 
 
@@ -143,9 +148,21 @@ vaccination_africa.Group_of_Doses
 FROM covid_africa
 JOIN vaccination_africa 
 ON covid_africa.country = vaccination_africa.country
-order by covid_africa.Total_Recovered DESC
+ORDER BY covid_africa.Total_Recovered DESC
 LIMIT 10;
 
+
+-- Finding vaccination situation of top 10 countries with the most active cases
+
+SELECT 
+covid_africa.country,
+covid_africa.active_cases,
+vaccination_africa.Group_of_Doses
+FROM covid_africa
+JOIN vaccination_africa 
+ON covid_africa.country = vaccination_africa.country
+ORDER BY covid_africa.active_cases DESC
+LIMIT 10;
 
 
 -- Finding countries with total data over world average
@@ -158,7 +175,6 @@ total_cases_per_million_population
 FROM covid_africa
 WHERE total_cases_per_million_population > 30656
 ORDER by total_cases_per_million_population DESC;
-
 
 
 -- Finding Countries with Total deaths per million population over world average
