@@ -7,7 +7,7 @@ This project examines perceptions, insights and finding out the main features of
 - [“African Covid cases”](https://www.kaggle.com/datasets/johnfisayo/african-covid-cases)
 - [“Coronavirus (COVID-19) Vaccination in Africa”](https://www.kaggle.com/datasets/malcolm95/covid19-vaccination-in-africa)
 
-*Both were released in 2021*
+*Both were published in 2021*
 
 ## Questions
 
@@ -15,8 +15,8 @@ This project examines perceptions, insights and finding out the main features of
 - Do more people get infected in countries with larger populations?
 - Do the countries with more cases have more deaths?
 - Do the countries where more tests are conducted show more cases?
-- Do countries located in nearby areas have a similar number of cases?* In order to answer this question, most of the visualizations include Tableau maps.
-- Does vaccination influence a decrease or health improvement?
+- Do the countries close to each other have similar infection levels or number of cases?* In order to answer this question, most of the visualizations include Tableau maps.
+- Does vaccination cause a decrease in infections and a health improvement?
 
 ## Tools
 
@@ -36,11 +36,11 @@ This project examines perceptions, insights and finding out the main features of
 
 ![Finding main ratios and general information](tableau_dashboards/1_general_info_ratios.png)
 
-2. Top 10 most populated countries and Top 10 countries with the most cases
+2. Top 10 most populous countries and Top 10 countries with the most total cases
 
-![Top 10 most populated countries and Top 10 countries with the most Covid-19 cases in Africa](tableau_dashboards/2_top_population_top_cases.png)
+![Top 10 most populous countries and the most total cases](tableau_dashboards/2_top_population_top_cases.png)
 
-3. Top 10 countries with the most highest number of deaths and Top 10 countries with the highest number of total tests
+1. Top 10 countries with the most highest number of deaths and Top 10 countries with the highest number of total tests
 
 ![Top 10 most deaths and test](tableau_dashboards/3_top_deaths_tests.png)
 
@@ -58,6 +58,6 @@ This project examines perceptions, insights and finding out the main features of
 
 7. Further analysis on ratios
 
-The parameters for comparison with World average were taken from this article [Covid19 in Africa and Clustering](https://www.kaggle.com/code/sasakitetsuya/covid19-in-africa-eda-and-clustering), dataset released in 2021 too. This is a secondary source. The primary source is informed in the above mentioned analysis
+The parameters for comparison with World average were taken from this article [Covid19 in Africa and Clustering](https://www.kaggle.com/code/sasakitetsuya/covid19-in-africa-eda-and-clustering), dataset published in 2021 too. Please note that this is a secondary source. The primary source is informed in the above mentioned article.
 
 ![Further analysis on ratios](tableau_dashboards/7_further_ratios.png)
