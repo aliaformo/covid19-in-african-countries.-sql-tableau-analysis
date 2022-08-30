@@ -14,7 +14,8 @@ FROM vaccination_africa;
 
 -- Updating dosesAdministered column, filling empty cells with 0, representing 0 dosesAdministered
 
-UPDATE vaccination_africa 
+UPDATE 
+vaccination_africa 
 SET Doses_administered = 0 
 WHERE Doses_administered is NULL;
 
@@ -22,10 +23,10 @@ SELECT *
 FROM vaccination_africa;
 
 
-
 -- Updating group_of_doses column, replacing "Not Started" with 0
 
-UPDATE vaccination_africa 
+UPDATE 
+vaccination_africa 
 SET group_of_doses = "0" 
 WHERE group_of_doses = "Not Started";
 
@@ -33,12 +34,11 @@ SELECT *
 FROM vaccination_africa;
 
 
-
 -- Finding main ratios
 
 SELECT 
-MIN(covid_africa.Total_Cases_per_million_population) as Min_population_ratio,
-MAX(covid_africa.total_cases_per_million_population) as Max_population_ratio,
+MIN(covid_africa.Total_Cases_per_million_population) AS Min_population_ratio,
+MAX(covid_africa.total_cases_per_million_population) AS Max_population_ratio,
 MIN(covid_africa.deaths_per_million_population) AS Min_death_ratio,
 MAX(covid_africa.deaths_per_million_population) AS Max_death_ratio,
 MIN(covid_africa.tests_per_milion_population) AS Min_test_ratio,
